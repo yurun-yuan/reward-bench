@@ -199,7 +199,7 @@ def main():
     reward_pipeline_kwargs = {
         "batch_size": BATCH_SIZE,  # eval_args.inference_batch_size,
         "truncation": True,
-        "padding": True,
+        "padding": 'max_length',
         "max_length": args.max_length,
         "function_to_apply": "none",  # Compute raw logits
         "return_token_type_ids": False,
